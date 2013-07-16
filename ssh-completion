@@ -1,0 +1,6 @@
+__from_ssh_config() {
+  SSHCONFIG=$HOME/.ssh/config
+  COMPREPLY=()
+  local cur=${COMP_WORDS[COMP_CWORD]}
+  COMPREPLY=($(compgen -W '$(cat ~/.ssh/config | grep Host | cut -d" " -f2-)' -- $cur))
+}
