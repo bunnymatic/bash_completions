@@ -4,3 +4,5 @@ __from_ssh_config() {
   local cur=${COMP_WORDS[COMP_CWORD]}
   COMPREPLY=($(compgen -W '$(cat ~/.ssh/config | grep Host | cut -d" " -f2-)' -- $cur))
 }
+
+complete -F __from_ssh_config -o default ssh
