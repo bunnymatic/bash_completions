@@ -5,7 +5,7 @@ a folder called `bash_completions`
 
 ```shell
 cd ~
-git co git@github.com:bunnymatic/bash_completions.git
+git clone git@github.com:bunnymatic/bash_completions.git
 ```
 
 Add the following to your `.bashrc` or `.profile`
